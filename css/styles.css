@@ -1,0 +1,285 @@
+body {
+    /* --------
+         Color Palette. Looks very messy, must be reworked.
+    -------- */
+
+    /* text */
+    --text-primary-color: #434455;
+
+    --header-text-color: #2E2F42;
+    --navlink-text-color: #2E2F42;
+    --navlink-active-color: #4D5AE5;
+
+    /* logo */
+    --logo-accent-text-color: #4D5AE5;
+    --logo-footer-text-color: #F4F4FD;
+
+    /* backgrounds */
+
+    --background-page-color: #E5E5E5;
+    --background-section-primary-color: #FFFFFF;
+    --background-section-secondary-color: #F4F4FD;
+    --background-section-hero: #2E2F42;
+    /*according to color scheme should be rgba(0, 0, 0, 0.05);*/
+    --background-footer-color: #2E2F42;
+
+
+    /* actions */
+
+    --button-main-color: #4D5AE5;
+    --button-hover-color: #404BBF;
+
+    --filter-main-color: #F4F4FD;
+    --filter-active-color: #404BBF;
+
+    --button-text-color: #FFFFFF;
+    --filter-text-color: #4D5AE5;
+
+    --selector-active-color: #404BBF;
+    --selector-inactive-color: #F4F4FD;
+    --accent-color: #E7E9FC;
+    /*selector border, footer text*/
+
+    --actions-text-white-color: #FFFFFF;
+    --actions-text-blue-color: #4D5AE5;
+
+    /* shadows? rgba */
+
+    /* --------
+        End of Palette block
+    -------- */
+
+
+    /* Backgrounds color, hovers e.t.c. added just for visual purposes. Will be remade. */
+
+    background-color: var(--background-page-color);
+    color: var(--text-primary-color);
+
+    font-family: 'Roboto', sans-serif;
+    
+    /* Browser predefined, Google Chrome v.108 */
+    /* font-weight: 400; */
+    /* font-style: normal; */
+    /* font-size: 16px; */
+
+    /* line-height: 1.5; */
+    /* letter-spacing: 0.02em; */
+
+}
+
+/* common undotted list*/
+.list {
+    list-style: none;
+}
+
+
+/* common dark item header */
+.item-title {
+    color: var(--header-text-color);
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+.item-text {
+
+    /* Temporary fix for a text wrapped with link in a team block (styles inherited from user-agent).  */
+    /* Will be deleted because team items doesn't look like a link on next mockups*/
+    color: var(--text-primary-color);
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.section {
+    background-color: var(--background-section-primary-color);
+}
+
+.section-title {
+    color: var(--header-text-color);
+    
+    /* Browser predefined, Google Chrome v.108 */
+    /* font-weight: 700; */
+
+    font-size: 36px; 
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+}
+
+/* .section-text {
+
+} */
+
+/* links */
+
+.item-link {
+    text-decoration: none;
+}
+
+/* Just for hover/focused purposes */
+.item-link:hover,
+.item-link:focus {
+    background-color: var(--navlink-active-color);
+}
+
+.button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    /* font-style: normal; */
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    cursor: pointer;
+}
+
+.button.primary {
+    color: var(--button-text-color);
+    background-color: var(--button-main-color);
+
+}
+
+.button.primary:hover,
+.button.primary:focus {
+    background-color: var(--button-hover-color);
+
+}
+
+/* It`s unclear is blue color of filter button represents a hover effect, or it`s is-active state of filter.  */
+/* So leave this implementation */
+
+.button.filter {
+    background-color: var(--filter-main-color);
+    color: var(--filter-text-color);
+
+}
+
+.button.filter:hover,
+.button.filter:focus {
+    background-color: var(--filter-active-color);
+    color: var(--button-text-color);
+
+}
+
+/* Header Section */
+
+.header {
+    background-color: var(--background-section-primary-color);
+}
+
+/* Logo Elements*/
+
+.logo {
+    text-decoration: none;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 1.33;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.logo .logo-accent {
+    color: var(--logo-accent-text-color);
+}
+
+
+/* Site Navigation Block */
+
+.navigation-item {
+    color: var(--navlink-text-color);
+    text-decoration: none;
+    
+}
+
+.navigation-item:hover,
+.navigation-item:focus {
+    color: var(--navlink-active-color);
+}
+
+.navigation-list .navigation-item {
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+
+/* Contacts Block*/
+
+.contact-item {
+    color: var(--text-primary-color);
+    text-decoration: none;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.contact-item:hover,
+.contact-item:focus {
+    color: var(--navlink-active-color);
+}
+
+.contact-list .contact-item {
+    font-style: normal;
+}
+
+/* Hero Section */
+
+.hero {
+
+    /*according to color scheme should be rgba(0, 0, 0, 0.05), ???*/
+    background-color: var(--background-section-hero);
+
+}
+
+.hero-title {
+    color: #FFFFFF;
+
+    /* Browser predefined, Google Chrome v.108 */
+    /* font-weight: 700; */
+
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+}
+
+/* Strengths Section */
+
+
+/* Services Section */
+
+
+/* Team Section */
+
+.section.team {
+    background-color: var(--background-section-secondary-color);
+}
+
+
+
+
+
+/* Footer Section */
+
+.footer {
+    color: var(--logo-footer-text-color);
+    background-color: var(--background-footer-color);
+}
+
+.footer-text {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+}
+
+.footer>.logo {
+    color: var(--logo-footer-text-color);
+
+    line-height: 1.67;
+}
+
+.footer>.logo:hover,
+.footer>.logo:focus {
+    color: var(--navlink-active-color);
+}
