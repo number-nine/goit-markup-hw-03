@@ -56,7 +56,7 @@ body {
     color: var(--text-primary-color);
 
     font-family: 'Roboto', sans-serif;
-    
+
     /* Browser predefined, Google Chrome v.108 */
     /* font-weight: 400; */
     /* font-style: normal; */
@@ -68,7 +68,7 @@ body {
 }
 
 .container {
-    width: 1128px;
+    width: 1152px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 12px;
@@ -80,12 +80,19 @@ body {
 
 /* common undotted list*/
 .list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
     list-style: none;
 }
 
 
 /* common dark item header */
 .item-title {
+    margin-top: 0;
+    margin-bottom: 0;
+
     color: var(--header-text-color);
 
     font-weight: 500;
@@ -95,6 +102,8 @@ body {
 }
 
 .item-text {
+    margin-top: 0;
+    margin-bottom: 0;
 
     /* Temporary fix for a text wrapped with link in a team block (styles inherited from user-agent).  */
     /* Will be deleted because team items doesn't look like a link on next mockups*/
@@ -108,12 +117,15 @@ body {
 }
 
 .section-title {
+    margin-top: 0;
+    margin-bottom: 72px;
+
     color: var(--header-text-color);
-    
+
     /* Browser predefined, Google Chrome v.108 */
     /* font-weight: 700; */
 
-    font-size: 36px; 
+    font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
@@ -183,14 +195,16 @@ body {
 /* Logo Elements*/
 
 .logo {
-    text-decoration: none;
 
+    
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.33;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-decoration: none;
+
 }
 
 .logo .logo-accent {
@@ -203,7 +217,7 @@ body {
 .navigation-item {
     color: var(--navlink-text-color);
     text-decoration: none;
-    
+
 }
 
 .navigation-item:hover,
@@ -243,9 +257,14 @@ body {
     /*according to color scheme should be rgba(0, 0, 0, 0.05), ???*/
     background-color: var(--background-section-hero);
 
+    text-align: center;
+
 }
 
 .hero-title {
+    margin-top: 0;
+    margin-bottom: 48px;
+
     color: #FFFFFF;
 
     /* Browser predefined, Google Chrome v.108 */
@@ -257,9 +276,28 @@ body {
 }
 
 /* Strengths Section */
+.strengths {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.strengths .section-title {
+    /* To show it`s invisible title */
+    color: lightslategrey;
+
+}
+
+.strengths .item-title {
+    margin-bottom: 8px;
+}
 
 
 /* Services Section */
+/* .services .section-title {
+    margin-bottom: 72px;
+} */
+
+
 
 
 /* Team Section */
@@ -280,6 +318,9 @@ body {
 }
 
 .footer-text {
+    margin-top: 0;
+    margin-bottom: 0;
+
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
