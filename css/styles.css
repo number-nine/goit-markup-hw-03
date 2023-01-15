@@ -67,6 +67,17 @@ body {
 
 }
 
+.container {
+    width: 1128px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    outline: 2px dashed orange;
+
+}
+
 /* common undotted list*/
 .list {
     list-style: none;
