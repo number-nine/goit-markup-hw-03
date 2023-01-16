@@ -78,6 +78,11 @@ body {
 
 }
 
+/* 4px fix */
+.block-img {
+    display: block;
+}
+
 /* common undotted list*/
 .list {
     margin-top: 0;
@@ -193,6 +198,12 @@ body {
     background-color: var(--background-section-primary-color);
 }
 
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Logo Elements*/
 
 .logo {
@@ -212,10 +223,30 @@ body {
     color: var(--logo-accent-text-color);
 }
 
+.logo.navigation-item {
+    margin-right: 76px;
+}
+
 
 /* Site Navigation Block */
 
+.navigation {
+    display: flex;
+}
+
+.navigation-list {
+    display: flex;
+}
+
+.navigation-list .item:not(:last-child) {
+    margin-right: 40px;
+}
+
 .navigation-item {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     color: var(--navlink-text-color);
     text-decoration: none;
 
@@ -235,7 +266,19 @@ body {
 
 /* Contacts Block*/
 
+.contact-list {
+    display: flex;
+}
+
+.contact-list .item:not(:last-child) {
+    margin-right: 40px;
+}
+
 .contact-item {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
     color: var(--text-primary-color);
     text-decoration: none;
     line-height: 1.5;
@@ -293,6 +336,15 @@ body {
     margin-bottom: 8px;
 }
 
+.strengths-list {
+    display: flex;
+    /* justify-content: space-between;  */
+}
+
+.strengths-list .item:not(:last-child) {
+    /* min-width: 264px; */
+    margin-right: 24px;
+}
 
 /* Services Section */
 
@@ -305,10 +357,13 @@ body {
     margin-bottom: 72px;
 }
 
-/* .services .section-title {
-    margin-bottom: 72px;
-} */
+.services-list {
+    display: flex;
+}
 
+.services-list .item:not(:last-child) {
+    margin-right: 24px;
+}
 
 
 
@@ -323,6 +378,26 @@ body {
 
 .team .section-title {
     margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+}
+
+.team-list .item{
+    text-align: center;
+}
+
+.team-list .item:not(:last-child) {
+    margin-right: 24px;
+}
+
+.team-list .caption-wrapper {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    background-color: var(--background-section-primary-color);
+
 }
 
 
@@ -356,7 +431,7 @@ body {
     background-color: var(--background-footer-color);
 }
 
-.footer>.logo {
+.footer .logo {
     margin-bottom: 16px;
 
     color: var(--logo-footer-text-color);
@@ -364,8 +439,8 @@ body {
     line-height: 1.67;
 }
 
-.footer>.logo:hover,
-.footer>.logo:focus {
+.footer .logo:hover,
+.footer .logo:focus {
     color: var(--navlink-active-color);
 }
 
