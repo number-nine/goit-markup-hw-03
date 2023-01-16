@@ -1,69 +1,18 @@
-body {
-    /* --------
-         Color Palette. Looks very messy, must be reworked.
-    -------- */
-
-    /* text */
-    --text-primary-color: #434455;
-
-    --header-text-color: #2E2F42;
-    --navlink-text-color: #2E2F42;
-    --navlink-active-color: #4D5AE5;
-
-    /* logo */
-    --logo-accent-text-color: #4D5AE5;
-    --logo-footer-text-color: #F4F4FD;
-
-    /* backgrounds */
-
-    --background-page-color: #E5E5E5;
-    --background-section-primary-color: #FFFFFF;
-    --background-section-secondary-color: #F4F4FD;
-    --background-section-hero: #2E2F42;
-    /*according to color scheme should be rgba(0, 0, 0, 0.05);*/
-    --background-footer-color: #2E2F42;
-
-
-    /* actions */
-
-    --button-main-color: #4D5AE5;
-    --button-hover-color: #404BBF;
-
-    --filter-main-color: #F4F4FD;
-    --filter-active-color: #404BBF;
-
-    --button-text-color: #FFFFFF;
-    --filter-text-color: #4D5AE5;
-
-    --selector-active-color: #404BBF;
-    --selector-inactive-color: #F4F4FD;
+:root {
+    --primary-brand: #4D5AE5;
+    --action-active: #404BBF;
+    --dark: #2E2F42;
+    --text-main: #434455;
     --accent-color: #E7E9FC;
-    /*selector border, footer text*/
+    --light: #F4F4FD;
+    --background-primary: #FFFFFF;
+}
 
-    --actions-text-white-color: #FFFFFF;
-    --actions-text-blue-color: #4D5AE5;
+body {
 
-    /* shadows? rgba */
-
-    /* --------
-        End of Palette block
-    -------- */
-
-
-    /* Backgrounds color, hovers e.t.c. added just for visual purposes. Will be remade. */
-
-    background-color: var(--background-page-color);
-    color: var(--text-primary-color);
+    color: var(--text-main);
 
     font-family: 'Roboto', sans-serif;
-
-    /* Browser predefined, Google Chrome v.108 */
-    /* font-weight: 400; */
-    /* font-style: normal; */
-    /* font-size: 16px; */
-
-    /* line-height: 1.5; */
-    /* letter-spacing: 0.02em; */
 
 }
 
@@ -74,7 +23,7 @@ body {
     padding-left: 12px;
     padding-right: 12px;
 
-    outline: 2px dashed orange;
+    /* outline: 2px dashed orange; */
 
 }
 
@@ -98,7 +47,7 @@ body {
     margin-top: 0;
     margin-bottom: 0;
 
-    color: var(--header-text-color);
+    color: var(--dark);
 
     font-weight: 500;
     font-size: 20px;
@@ -112,20 +61,20 @@ body {
 
     /* Temporary fix for a text wrapped with link in a team block (styles inherited from user-agent).  */
     /* Will be deleted because team items doesn't look like a link on next mockups*/
-    color: var(--text-primary-color);
+    color: var(--text-main);
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
 
 .section {
-    background-color: var(--background-section-primary-color);
+    background-color: var(--background-primary);
 }
 
 .section-title {
     margin-top: 0;
     margin-bottom: 0;
 
-    color: var(--header-text-color);
+    color: var(--dark);
 
     /* Browser predefined, Google Chrome v.108 */
     /* font-weight: 700; */
@@ -137,9 +86,6 @@ body {
     text-align: center;
 }
 
-/* .section-text {
-
-} */
 
 /* links */
 
@@ -150,14 +96,17 @@ body {
 /* Just for hover/focused purposes */
 .item-link:hover,
 .item-link:focus {
-    background-color: var(--navlink-active-color);
+    background-color: var(--primary-brand);
 }
 
 .button {
+
+    border-radius: 4px;
+    border: 1px solid transparent;
+
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
-    /* font-style: normal; */
     line-height: 1.5;
     letter-spacing: 0.04em;
 
@@ -165,37 +114,42 @@ body {
 }
 
 .button.primary {
-    color: var(--button-text-color);
-    background-color: var(--button-main-color);
+    padding: 16px 32px;
+    color: var(--background-primary);
+    background-color: var(--primary-brand);
 
 }
 
 .button.primary:hover,
 .button.primary:focus {
-    background-color: var(--button-hover-color);
+    background-color: var(--action-active);
 
 }
 
-/* It`s unclear is blue color of filter button represents a hover effect, or it`s is-active state of filter.  */
-/* So leave this implementation */
 
 .button.filter {
-    background-color: var(--filter-main-color);
-    color: var(--filter-text-color);
+    padding: 12px 24px;
+    border: 1px solid var(--accent-color);
+
+
+    background-color: var(--light);
+    color: var(--primary-brand);
 
 }
 
 .button.filter:hover,
 .button.filter:focus {
-    background-color: var(--filter-active-color);
-    color: var(--button-text-color);
+    border: 1px solid transparent;
+
+    background-color: var(--action-active);
+    color: var(--background-primary);
 
 }
 
 /* Header Section */
 
 .header {
-    background-color: var(--background-section-primary-color);
+    background-color: var(--background-primary);
 }
 
 .header .container {
@@ -220,7 +174,7 @@ body {
 }
 
 .logo .logo-accent {
-    color: var(--logo-accent-text-color);
+    color: var(--primary-brand);
 }
 
 .logo.navigation-item {
@@ -247,14 +201,14 @@ body {
     padding-top: 24px;
     padding-bottom: 24px;
 
-    color: var(--navlink-text-color);
+    color: var(--dark);
     text-decoration: none;
 
 }
 
 .navigation-item:hover,
 .navigation-item:focus {
-    color: var(--navlink-active-color);
+    color: var(--primary-brand);
 }
 
 .navigation-list .navigation-item {
@@ -279,7 +233,7 @@ body {
     padding-top: 24px;
     padding-bottom: 24px;
 
-    color: var(--text-primary-color);
+    color: var(--text-main);
     text-decoration: none;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -287,7 +241,7 @@ body {
 
 .contact-item:hover,
 .contact-item:focus {
-    color: var(--navlink-active-color);
+    color: var(--primary-brand);
 }
 
 .contact-list .contact-item {
@@ -299,7 +253,7 @@ body {
 .hero {
 
     /*according to color scheme should be rgba(0, 0, 0, 0.05), ???*/
-    background-color: var(--background-section-hero);
+    background-color: var(--dark);
 
     text-align: center;
 
@@ -309,7 +263,7 @@ body {
     margin-top: 0;
     margin-bottom: 48px;
 
-    color: #FFFFFF;
+    color: var(--background-primary);
 
     /* Browser predefined, Google Chrome v.108 */
     /* font-weight: 700; */
@@ -373,7 +327,7 @@ body {
     padding-top: 120px;
     padding-bottom: 120px;
 
-    background-color: var(--background-section-secondary-color);
+    background-color: var(--light);
 }
 
 .team .section-title {
@@ -384,8 +338,12 @@ body {
     display: flex;
 }
 
-.team-list .item{
+.team-list .item {
     text-align: center;
+}
+
+.team-list .item-title {
+    margin-bottom: 8px;
 }
 
 .team-list .item:not(:last-child) {
@@ -396,8 +354,7 @@ body {
     padding-top: 32px;
     padding-bottom: 32px;
 
-    background-color: var(--background-section-primary-color);
-
+    background-color: var(--background-primary);
 }
 
 
@@ -408,17 +365,47 @@ body {
     padding-bottom: 120px;
 }
 
-.portfolio .filter-list {
+.filter-list {
+    display: flex;
+    justify-content: center;
     margin-bottom: 72px;
 }
 
-.portfolio .item {
+.works-list .item-image {
     margin-bottom: 32px;
 }
 
-.portfolio .item-title {
+.works-list .item-title {
     margin-bottom: 8px;
+    margin-left: 16px;
 }
+
+.works-list .item-text {
+    margin-left: 16px;
+}
+
+/* Portfolio Filter */
+
+.filter-list .item:not(:last-child) {
+    margin-right: 24px;
+}
+
+/* Portfolio Works Catalogue */
+
+.works-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.works-list .item:not(:nth-child(3n)) {
+    margin-right: 24px;
+}
+
+.works-list .item:not(:nth-last-child(-n+3)) {
+    margin-bottom: 48px;
+}
+
+
 
 
 /* Footer Section */
@@ -427,26 +414,27 @@ body {
     padding-top: 100px;
     padding-bottom: 100px;
 
-    color: var(--logo-footer-text-color);
-    background-color: var(--background-footer-color);
+    color: var(--light);
+    background-color: var(--dark);
 }
 
 .footer .logo {
+    display: block;
     margin-bottom: 16px;
 
-    color: var(--logo-footer-text-color);
+    color: var(--light);
 
     line-height: 1.67;
 }
 
 .footer .logo:hover,
 .footer .logo:focus {
-    color: var(--navlink-active-color);
+    color: var(--primary-brand);
 }
 
 .footer-text {
-    margin-top: 0;
     margin-bottom: 0;
+    max-width: 264px;
 
     line-height: 1.5;
     letter-spacing: 0.02em;
