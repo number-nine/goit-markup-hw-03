@@ -76,8 +76,6 @@ body {
 
     color: var(--dark);
 
-    /* Browser predefined, Google Chrome v.108 */
-    /* font-weight: 700; */
 
     font-size: 36px;
     line-height: 1.11;
@@ -265,9 +263,6 @@ body {
 
     color: var(--background-primary);
 
-    /* Browser predefined, Google Chrome v.108 */
-    /* font-weight: 700; */
-
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
@@ -296,7 +291,6 @@ body {
 }
 
 .strengths-list .item:not(:last-child) {
-    /* min-width: 264px; */
     margin-right: 24px;
 }
 
