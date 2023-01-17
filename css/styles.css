@@ -147,6 +147,7 @@ body {
 /* Header Section */
 
 .header {
+    border-bottom: 1px solid var(--accent-color);
     background-color: var(--background-primary);
 }
 
@@ -345,8 +346,7 @@ body {
 }
 
 .team-list .caption-wrapper {
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 32px 16px;
 
     background-color: var(--background-primary);
 }
@@ -365,18 +365,25 @@ body {
     margin-bottom: 72px;
 }
 
-.works-list .item-image {
+/* .works-list .item-image {
     margin-bottom: 32px;
-}
+} */
 
 .works-list .item-title {
     margin-bottom: 8px;
-    margin-left: 16px;
+    
 }
 
-.works-list .item-text {
-    margin-left: 16px;
+.works-list .caption-wrapper {
+    padding: 32px 16px;
+   
+    border-left: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    
+
 }
+
 
 /* Portfolio Filter */
 
